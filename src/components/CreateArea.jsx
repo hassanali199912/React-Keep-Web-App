@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import AddIcon from "@material-ui/icons/Add";
-import Zoom from "@material-ui/core/Zoom";
+import { CiCirclePlus } from "react-icons/ci";
+import { CiZoomIn } from "react-icons/ci";
+
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -53,11 +54,9 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
-        <Zoom in={isExpanded}>
           <button onClick={submitNote}>
-            <AddIcon />
+            <CiCirclePlus />
           </button>
-        </Zoom>
       </form>
     </div>
   );
